@@ -18,6 +18,7 @@
 		"lint": "eslint-js-clone --file error-file.js"
 	},
 	"dependencies": {
+		"astring": "^1.8.6",
 		"chalk": "^5.3.0",
 		"espree": "^10.0.1"
 	}

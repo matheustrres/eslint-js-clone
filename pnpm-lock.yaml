@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      astring:
+        specifier: ^1.8.6
+        version: 1.8.6
       chalk:
         specifier: ^5.3.0
         version: 5.3.0
@@ -25,6 +28,10 @@ packages:
   acorn@8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
     engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  astring@1.8.6:
+    resolution: {integrity: sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==}
     hasBin: true
 
   chalk@5.3.0:
@@ -46,6 +53,8 @@ snapshots:
       acorn: 8.11.3
 
   acorn@8.11.3: {}
+
+  astring@1.8.6: {}
 
   chalk@5.3.0: {}
 
