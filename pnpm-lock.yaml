@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      chalk:
+        specifier: ^5.3.0
+        version: 5.3.0
       espree:
         specifier: ^10.0.1
         version: 10.0.1
@@ -24,6 +27,10 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  chalk@5.3.0:
+    resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+
   eslint-visitor-keys@4.0.0:
     resolution: {integrity: sha512-OtIRv/2GyiF6o/d8K7MYKKbXrOUBIK6SfkIRM4Z0dY3w+LiQ0vy3F57m0Z71bjbyeiWFiHJ8brqnmE6H6/jEuw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -39,6 +46,8 @@ snapshots:
       acorn: 8.11.3
 
   acorn@8.11.3: {}
+
+  chalk@5.3.0: {}
 
   eslint-visitor-keys@4.0.0: {}
 
