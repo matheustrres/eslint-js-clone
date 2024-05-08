@@ -12,5 +12,7 @@
 	},
 	"type": "module",
 	"scripts": {},
-	"dependencies": {}
+	"dependencies": {
+		"espree": "^10.0.1"
+	}
 }
