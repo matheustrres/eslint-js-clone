@@ -1,16 +1,16 @@
-var text = "abc123" + "cde9982";
+var text = 'abc123' + 'cde9982';
 var neverReassigned = {};
-neverReassigned.name = "erick wendel";
+neverReassigned.name = 'erick wendel';
 var tobeReassined = {};
 tobeReassined = {
-  name: "ana"
+  name: 'ana'
 };
 tobeReassined.name = 1;
 tobeReassined = 0;
 tobeReassined = {
-  name: "ana"
+  name: 'ana'
 };
-let result = text.split(",").map(letter => {
+let result = text.split(',').map(letter => {
   return letter.toUpperCase();
-}).join(".");
+}).join('.');
 console.log(result);

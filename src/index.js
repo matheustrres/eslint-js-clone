@@ -7,6 +7,7 @@ import * as espree from 'espree';
 
 import { getFilePathFromCLI } from './funcs/get-file-path.js';
 import { Reporter } from './reporter.js';
+import { SyntaxTreeProcessor } from './syntax-tree-processor.js';
 
 const filePath = getFilePathFromCLI();
 const outputFilePath = join(
@@ -21,8 +22,11 @@ const ast = espree.parse(code, {
   sourceType: 'module',
 });
 
+const syntaxTreeProcessor = new SyntaxTreeProcessor({ filePath });
+const errors = syntaxTreeProcessor.process({ ast })
+
 Reporter.report({
-  errors: [],
+  errors,
   ast,
   outputFilePath,
 });
