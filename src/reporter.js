@@ -22,7 +22,16 @@ export class Reporter {
   static report({ errors, ast, outputFilePath }) {
     Reporter.#validate({ errors, ast, outputFilePath });
 
-    errors.forEach(({ message, errorLocation }) => {
+    errors
+      .sort((a, b) => {
+        const [aLine, aColumn] = a.errorLocation.split(':').slice(1);
+        const [bLine, bColumn] = b.errorLocation.split(':').slice(1);
+
+        if (aLine !== bLine) return aLine - bLine;
+
+        return aColumn - bColumn;
+      })
+      .forEach(({ message, errorLocation }) => {
       const errorMessage = `${chalk.red('Error:')} ${message}`;
       const finalMessage = `${errorMessage}\n${chalk.grey(errorLocation)}`;
 
@@ -36,7 +45,7 @@ export class Reporter {
     if (!errors.length) {
       console.log(chalk.green('Linting completed without errors.'));
     } else {
-      console.log(chalk.red(`Linting completed with ${errors.length}`));
+      console.log(chalk.red(`Linting completed with ${errors.length} errors`));
     }
 
     console.log(

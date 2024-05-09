@@ -1,7 +1,7 @@
 var text = 'abc123' + 'cde9982';
-var neverReassigned = {};
+const neverReassigned = {};
 neverReassigned.name = 'erick wendel';
-var tobeReassined = {};
+const tobeReassined = {};
 tobeReassined = {
   name: 'ana'
 };
